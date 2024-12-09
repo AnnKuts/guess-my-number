@@ -9,6 +9,6 @@ The project's aim is to guess a number that is randomly generated. It's one of m
 ![And when you wins😸](https://drive.google.com/uc?export=view&id=1RyIiodnA5UaRyy3yFPrDgjcvowBQsJXW)
 ### 🖥️My Social Media
 ⬇️For more information contact me there⬇️ 
-+ [Instagram](instagram.com/kytsi)
-+ [Telegram](t.me/kuannts)
++ [Instagram](https://instagram.com/kytsi)
++ [Telegram](https://t.me/kuannts)
 <!-- Thank you and see you soon🎀💓 -->
