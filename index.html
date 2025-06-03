@@ -28,5 +28,17 @@
       </section>
     </main>
     <script type="module" src="src/script.js"></script>
+    <div id="stats-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>📊 Stats</h2>
+        <ul id="stats">
+          <li><strong>📈 The best:</strong> <span id="best-guess">—</span></li>
+          <li><strong>📉 The worst:</strong> <span id="worst-guess">—</span></li>
+          <li><strong>⏳ The first:</strong> <span id="oldest-guess">—</span></li>
+          <li><strong>🕒 The last:</strong> <span id="newest-guess">—</span></li>
+        </ul>
+        <button id="close-modal">Close!</button>
+      </div>
+    </div>
   </body>
 </html>
