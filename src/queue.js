@@ -1,15 +1,21 @@
 export function queue() {
     const queue = [];
-    let id = 0;
+    let highest = 0;
+    let lowest = 0;
 
     return {
         enqueue(value, priority) {
             queue.push({
-                id: id++,
                 value,
                 priority,
-                timestamp: Date.now(),
             });
+
+            if( highest === null || priority < queue[highest].priority) {
+                highest = queue.length - 1;
+            }
+            else if (lowest === null || priority > queue[lowest].priority) {
+                lowest = queue.length - 1;
+            }
         },
 
         peek(mode = "highest") {
@@ -18,13 +24,14 @@ export function queue() {
             const sorted = [...queue];
             switch (mode) {
                 case "highest":
-                    return sorted.sort((a, b) => a.priority - b.priority)[0];
+                return queue[highest];
                 case "lowest":
-                    return sorted.sort((a, b) => b.priority - a.priority)[0];
+                    sorted.sort((a, b) => b.priority - a.priority);
+                    return queue[lowest];
                 case "oldest":
-                    return sorted.sort((a, b) => a.id - b.id)[0];
+                    return queue[0];
                 case "newest":
-                    return sorted.sort((a, b) => b.id - a.id)[0];
+                    return queue[queue.length - 1];
                 default:
                     return null;
             }
@@ -32,7 +39,6 @@ export function queue() {
 
         clear() {
             queue.length = 0;
-            id = 0;
         },
     };
 }

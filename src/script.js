@@ -37,6 +37,7 @@ document.querySelector(".check").addEventListener("click", () => {
     const guess = Number(document.querySelector(".guess").value);
 
     const diff = Math.abs(guess - state.secretNumber);
+
     history.enqueue(guess, diff);
     const result = checkGuess(guess);
 
