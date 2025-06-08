@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Guess My Number!</title>
   </head>
   <body>
@@ -27,6 +27,18 @@
         </p>
       </section>
     </main>
-    <script src="script.js"></script>
+    <script type="module" src="src/script.js"></script>
+    <div id="stats-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>📊 Stats</h2>
+        <ul id="stats">
+          <li><strong>📈 The best:</strong> <span id="best-guess">—</span></li>
+          <li><strong>📉 The worst:</strong> <span id="worst-guess">—</span></li>
+          <li><strong>⏳ The first:</strong> <span id="oldest-guess">—</span></li>
+          <li><strong>🕒 The last:</strong> <span id="newest-guess">—</span></li>
+        </ul>
+        <button id="close-modal">Close!</button>
+      </div>
+    </div>
   </body>
 </html>
